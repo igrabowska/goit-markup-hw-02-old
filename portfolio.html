@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:ital,wght@0,400;0,500;0,900;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>WebStudio</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#"><span class="colour-logo">Web</span>Studio</a>
+      <nav>
+        <ul>
+          <li><a href="#./agencja.html" class="contact-data">Agencja</a></li>
+          <li><a href="./portfolio.html" class="contact-data">Portfolio</a></li>
+          <li>Kontakt</li>
+        </ul>
+      </nav>
+      <ul class="contact-data">
+        <!--Pytanie: 1.Dlaczego przy dodaniu klasy "contact-data" tylko przy samym <ul i wstawieniu w css przy tej klasie{ "text-decoration: none}" nie zadziałało usuniecie podkreslenia dla wszystkich elemetow z listy? 2.Jak ewentualnie powinno byc to zapisane aby zadzialalo? ps. Dodalam poźniej klase dla kazdego elementu href i w css usunelam text decoration - wtedy podkreslenie znikło,ale pytanie czy mozna to zrobic inaczej?
+        3. Czy jest jakaś róznica czy wstawiam klase przed href czy po? np. "contact-data" w stopce wprowadziłam zaraz po <a, a prz Agencji/Portfolio po href=".." ale efekt jest ten sam -->
+        <li>
+          <a class="contact-data" href="#">info@devstudio.com</a>
+        </li>
+        <li>
+          <a class="contact-data" href="#">+48 111 111 111</a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <nav>
+        <h1 class="mytitle">Dodatkowy tytuł</h1>
+        <!-- Przyciski filtrujące -->
+        <ul class="button">
+          <li><button type="button">Wszystkie</button></li>
+          <li><button type="button">Strony</button></li>
+          <li><button type="button">Aplikacje</button></li>
+          <li><button type="button">Dizajn</button></li>
+          <li><button type="button">Marketing</button></li>
+        </ul>
+      </nav>
+
+      <!--Galeria zdjęć projektów-->
+      <section>
+        <ul class="all-projects">
+          <li>
+            <figure>
+              <!-- Pytanie - dlaczego mamy podawac width i height w html, a nie w ccs np. poprzez nadanie tych samych wymiarow dla wszystkich obrazkow z danej grupy, ktore mialyby wspolną klasę?-->
+              <img
+                src="images/Technocrack-www.jpg"
+                alt="Zdjęcie projektu strony internetowej"
+                width="370"
+                height="294"
+              />
+              <figcaption>
+                <h3>Technocrack</h3>
+                <p>Strona internetowa</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="images/New-orlean-design.jpg"
+                alt="Projekt grafiki New Orlean"
+                width="370"
+                height="294"
+              />
+              <!--1. Czy prawidłowe jest dodawanie klas tak jak ponizej,tj. "project-title" i "service-type" pod kazdym obrazkiem? Czy mozna to jakoś inaczej ostylować/nadać klasy od razu dla wszystkich elementow w tej grupie? Chodzi o to aby wszystkie przedstawione projekty mialy te same grubosci i wielkosci czcionek w kazdej linii wizytowki danego projektu - jak to najlepiej osiagnac? 2. Czy nie powinnismy juz teraz przewidziec jakiejs klasy pod filtrowanie projektow ze wzgledu na ich rodzaj (tj. Strona internetowa/Apliakcja/marketing itp)?-->
+              <figcaption>
+                <h3 class="project-title">Grafika New Orlean vs Golden Star</h3>
+                <p class="servis-type">Dizajn</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="images/Seafood-app.jpg"
+                alt="Projekt aplikacji restauracji Seafood"
+                width="370"
+                height="294"
+              />
+              <figcaption>
+                <h3>Restauracja Seafood</h3>
+                <p>Aplikacja</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="images/Project-prime-marketing.jpg"
+                alt="Zdjęcie słuchawek"
+                width="370"
+                height="294"
+              />
+              <figcaption>
+                <h3>Projekt Prime</h3>
+                <p>Marketing</p>
+              </figcaption>
+            </figure>
+          </li>
+
+          <li>
+            <figure>
+              <img
+                src="images/Project-Boxes-app.jpg"
+                alt="Zdjęcie pudełek"
+                width="370"
+                height="294"
+              />
+              <figcaption>
+                <h3>Projekt Boxes</h3>
+                <p>Aplikacja</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="images/Inspiration-www.jpg"
+                alt="Strona internetowa Inspiration has no Borders wyświetlona na monitorze"
+                width="370"
+                height="294"
+              />
+              <figcaption>
+                <h3>Inspiration has no Borders</h3>
+                <p>Strona internetowa</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="images/Magazine-design.jpg"
+                alt="Otwarty katalog edycji limitowanej"
+                width="370"
+                height="294"
+              />
+              <figcaption>
+                <h3>Magazyn Limited Edition</h3>
+                <p>Dizajn</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="images/Project-lab-marketing.jpg"
+                alt="Papierowa etykieta"
+                width="370"
+                height="294"
+              />
+              <figcaption>
+                <h3>Projekt LAB</h3>
+                <p>Marketing</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img
+                src="images/Growing-business-app.jpg"
+                alt="Laptop z otwartą stroną internetową"
+                width="370"
+                height="294"
+              />
+              <figcaption>
+                <h3>Growing Business</h3>
+                <p>Aplikacja</p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <a class="logo" href="#"><span class="colour-logo">Web</span>Studio</a>
+      <address> <!--Pytanie: Jak usunąć pochylenie tekstu z adresu?-->
+        <ul>
+          <li>m. Warszawa, Aleje Jerozolimskie 21</li>
+          <li>
+            <a class="contact-data" href="#">info@example.com</a>
+          </li>
+          <li>
+            <a class="contact-data" href="#">+48 111 111 111</a>
+          </li>
+        </ul>
+      </address>
+    </footer>
+  </body>
+</html>
