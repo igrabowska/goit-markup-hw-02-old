@@ -1,8 +1,337 @@
-.mytitle {
-  color: blueviolet;
+body {
+  font-family: Roboto;
+  color: var(--text-color);
+  width: 1600px;
+  height: 2349px;
 }
 
-.contact-data {
+:root {
+  --brand-color: #2196f3;
+  --title-color: #212121;
+  --text-color: #757575;
+  --main-background: #ffffff;
+  --secondary-background: #f5f4fa;
+  --baner-background-color: #2f303a;
+}
+
+/* .header-wrapper {
+} */
+.top-navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1600px;
+  height: 80px;
+  /* Dlaczego podanie wysokosci 80px dla całej sekcji header nie zmiejsza nagłowka? */
+}
+.logo-header {
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.19;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: black;
+  width: 145px;
+  margin-left: 215px;
+  padding-right: 93px;
+}
+/* Układ mi sie troche posypał. Mam kłopot z marginesami/paddingami. Wstawienie marginesow 215px (jak w Figma) przy logo odsuwa je chyba dalej niz na projekcie?  */
+
+span {
+  color: var(--brand-color);
+}
+
+.menu li {
+  display: inline;
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 46px;
+  /* list-style: none; */
+}
+ul {
+  list-style: none;
+}
+/* Pytanie - dlaczego przy zapisie .menu ul{list style: none} lub .menu {list-style: none} nie usuwa kropek z klasy .menu? Ostatecznie wstawiłam dla wszystkich list ul{list-style:none} ale chyba nie tak powinno być? */
+
+.menu a {
+  color: var(--title-color);
   text-decoration: none;
 }
-.contact-data1 {text-decoration: none;}
+.menu a:hover {
+  color: #2196f3;
+  /* Pytanie: Dlaczego hover nie zmienia koloru jesli zamiast oznaczenia #2196f3 wstawi się --brand-color zdefiniowany w :root? */
+}
+
+.contact-list-header {
+  display: flex;
+}
+.contact-list-header a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  padding-inline: 50px;
+}
+.contact-list-header a:hover {
+  color: #2196f3;
+}
+
+.hero-baner {
+  width: 1600px;
+  height: 600px;
+  background-color: var(--baner-background-color);
+}
+
+h1 {
+  color: var(--main-background);
+  width: 696px;
+  height: 120px;
+  margin-left: 452px;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding-top: 200px;
+  padding-bottom: 30px;
+
+}
+
+.baner-button {
+  background-color: var(--brand-color);
+  color: #ffffff;
+  border-color: #2196f3;
+  width: 200px;
+  height: 50px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 00.06em;
+  border-radius: 4px;
+  margin-left: 700px;
+  margin-bottom: 200px;
+  cursor: pointer;
+}
+
+.service-description-list {
+  width: 1170px;
+  height: 101;
+  display: inline-flex;
+  padding-top: 94px;
+  margin-left: 215px;
+}
+
+.single-section-title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  padding-bottom: 10px;
+}
+.section-description {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 3%;
+}
+
+.description-module {
+  width: 270px;
+  height: 75px;
+  padding-left: 30px;
+}
+
+.our-service-section {
+  /* margin-left: 215px; */
+  margin: 0px, 215px, 0px, 215px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  text-align: center;
+}
+
+.main-section-title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.17;
+  /* text-align: center; */
+
+  /* Pytanie: Przy wstawieniu dla tej klasy width 1170px (jak w ukladzie), ostatnie zdjecie przeskakuje pod spod (do kolejnego wiersza). Jak ułozyc obrazki w jednym rzedzie aby byly zachowane marginesy z ukladu? */
+}
+
+.single-service-image {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.our-team-section {
+  background-color: var(--secondary-background);
+  width: 1600px;
+  height: 648px;
+}
+
+.main-section-title {
+  text-align: center;
+  padding-top: 94px;
+}
+
+.team-members-list {
+  width: 1170px;
+  height: 368px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-bottom: 94px;
+  /* Pytanie: 1. margin-left: 215px; - mam problem z marginesami. Przy wprowadzeniu marginesu jak w figmie, reszta contencu ucieka poza body. Jak sobie z tym poradzic? 2. Dlaczego przy wprowadzeniu padding bottom 94px jest mniejszy odstep niz przy paddingu-top 50px dla calej sekcji team-members-list?*/
+}
+
+.team-memeber-business-card {
+  background-color: var(--main-background);
+  width: 270px;
+  height: 368px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 3%;
+}
+
+.team-member-name {
+  color: var(--title-color);
+  /* font-size: 16px; */
+  font-weight: 500;
+  /* line-height: 1.19;
+  letter-spacing: 3%; */
+}
+
+/* .job-title {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 3%;
+} */
+/* Pytanie: Czy warto rozbijac nazwisko i stanowisko na odrebne klasy (jak zakomentowane powyzej), czy lepiej ostylowac czcionki w ogolnej wizytowce "team-member-business-card?*/
+
+.footer-section {
+  background-color: var(--baner-background-color);
+  width: 1600px;
+  height: 252px;
+  padding-top: 60px;
+}
+.logo-footer {
+  font-family: Raleway;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  width: 145px;
+  margin-left: 215px;
+}
+/* Pytania: 1. Dlaczego w stylizacji logo w tym miejscu po wstawieniu bialego koloru zdefiniowanego w :root, element Studio pozostaje niebieski, a po najechaniu myszką zmienia się na czerwony? ps. Ostatecznie musiałam wstawić kolor bialy z oznaczeniem #fffff */
+
+.contact-list-footer a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  font-style: normal;
+}
+
+.contact-list-footer a:hover {
+  color: var(--brand-color);
+}
+.contact-list-footer li {
+  font-style: normal;
+  color: var(--main-background);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 00.03em;
+  padding-top: 20px;
+  /* padding-bottom: 9px; */
+  margin-left: 180px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: aqua;
+}
+/* Dot. zadania 3 niektore wytyczne nie są jasne. Co do szerokosci kontenera zalozylam, ze kontener ma on miec 1200px i zawierac w sobie przyciski filtrowania, a nie naglowek - w figmie calosc ukladu z naglowkiem ma szer 1600px, a nie 1200.. Chyba ze dochodza jeszcze jakies dodatkowe marginesy figmy. Jesli tak jest, to jakie wymiery brac pod uwage w figmie?*/
+
+.portfolio-buttons li {
+  width: 572px;
+  height: 74px;
+  padding-right: 8px;
+  display: inline;
+  align-items: center;
+  margin-top: 94px;
+  /* PYTANIE. Męczę się z ustawieniem przyciskow (buttony filtrujace) posrodku strony - jak to zrobic? Ustawiajac marginesy jak w ukladzie w figmie rozwala ustawienie przyciskow na dwa rzędy. */
+}
+
+button {
+  color: #212121;
+  background-color: var(--brand-color);
+  border: var(--brand-color);
+  border-radius: 4px;
+  height: 38px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  font-family: Roboto;
+  font-weight: 500px;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 3%;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--main-background);
+}
+
+.all-projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0;
+  max-width: 100%;
+}
+.single-project {
+  width: auto;
+  border: 1px solid;
+  background-color: var(--main-background);
+  margin: 5px;
+  padding: 5px;
+}
+
+.portfolio-project-name {
+  font-family: Roboto;
+  font-weight: 700px;
+  font-size: 16px;
+  line-height: 2;
+  color: var(--title-color);
+}
+.portfolio-project-decription {
+  color: var(--text-color);
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.portfolio-project-decription {
+  display: inline-flex;
+}
+
+/* Uklad mi sie posypal jak ustawialam jak na figmie - jakie sa wymiary calej strony, ktora mamy projektowac?  */
